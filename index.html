@@ -1,35 +1,118 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofoliu Liviu Rhoș</title>
+  <title>Liviu B. - LAARB™ STUDIO PRODUCTION – Portfolio</title>
   <style>
-    body { font-family: sans-serif; padding: 2em; background: #f4f4f4; }
-    h1 { color: #333; }
-    .project { margin-bottom: 1.5em; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+      color: #222;
+    }
+
+    p.intro {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    .project {
+      background: #fff;
+      padding: 1.5em;
+      border-radius: 10px;
+      margin-bottom: 2em;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #005792;
+    }
+
+    a {
+      color: #005792;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-top: 3em;
+      background: #fff;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 1em;
+      margin-top: 0.5em;
+    }
   </style>
 </head>
 <body>
-  <h1>Proiectele mele</h1>
+
+  <header>
+    <h1>Liviu B.</h1>
+    <p class="intro"><strong>LAARB<sup>™</sup> STUDIO PRODUCTION</strong> – Software & Electronics Projects</p>
+  </header>
 
   <div class="project">
-    <h2><a href="https://github.com/liviurhos/radiolive-romania">Radio Live România</a></h2>
-    <p>PWA care permite ascultarea live a posturilor de radio din România. Include temă dark/light, salvare preferințe și afișare status redare.</p>
-    <p><a href="https://liviurhos.github.io/radiolive-romania/" target="_blank">Vezi live</a></p>
+    <h2><a href="https://github.com/liviurhos/radiolive-romania">Radio Live Romania</a></h2>
+    <p>A Progressive Web App (PWA) that lets users stream Romanian radio stations. Features include theme switching, bitrate selection, and local preference storage.</p>
+    <p><a href="https://liviurhos.github.io/radiolive-romania/" target="_blank">Live Demo</a></p>
   </div>
 
   <div class="project">
     <h2><a href="https://github.com/liviurhos/Winamp-Pi-Player">Winamp Pi Player</a></h2>
-    <p>Player audio cu interfață Winamp pentru Raspberry Pi, include control tactil și vizualizator audio FFT.</p>
+    <p>An audio player for Raspberry Pi, inspired by Winamp Classic. Built using Python and VLC backend with FFT-based audio visualizer and touchscreen-friendly controls.</p>
   </div>
 
   <div class="project">
-    <h2><a href="https://github.com/liviurhos/Three-Way-Traffic-Light-System">Semafor cu Arduino</a></h2>
-    <p>Proiect bazat pe Arduino pentru controlul unui sistem de semafor în 3 direcții. Folosește LED-uri și delay logic.</p>
+    <h2><a href="https://github.com/liviurhos/Three-Way-Traffic-Light-System">Three-Way Traffic Light System</a></h2>
+    <p>An Arduino project that simulates a three-direction traffic light system using LEDs and programmable delay logic. Ideal for basic embedded system demonstrations.</p>
   </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Liviu B., founder of <strong>LAARB<sup>™</sup> STUDIO PRODUCTION</strong>. I work on real-world tech that blends hardware with software — from interactive web apps to smart microcontroller projects. My goal is to build things that work, not just things that look good.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>For collaborations or tech inquiries, feel free to reach out:</p>
+    <a href="mailto:liviu@example.com">📧 Email</a>
+    <a href="https://github.com/liviurhos" target="_blank">💻 GitHub</a>
+  </section>
+
+  <footer>
+    © 2025 Liviu B. · LAARB<sup>™</sup> STUDIO PRODUCTION · Powered by GitHub Pages
+  </footer>
 
 </body>
 </html>
