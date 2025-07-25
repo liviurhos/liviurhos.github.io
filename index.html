@@ -19,6 +19,7 @@
       color: #fff;
       padding: 2rem 1rem;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -29,6 +30,20 @@
     header p {
       margin-top: 0.5rem;
       color: #ccc;
+    }
+
+    .live-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #e63946;
+      color: white;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .container {
@@ -62,17 +77,29 @@
       font-weight: bold;
     }
 
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     footer {
       background: #111;
       color: #ccc;
       padding: 2rem 1rem;
       margin-top: 3rem;
       text-align: center;
-    }
-
-    footer a {
-      color: #9fd7ff;
-      text-decoration: none;
     }
 
     @media (max-width: 600px) {
@@ -85,8 +112,9 @@
 <body>
 
   <header>
-    <h1>Liviu B. – LAARB<sup>™</sup> STUDIO PRODUCTION</h1>
+    <h1>Liviu B. – LAARB™ STUDIO PRODUCTION</h1>
     <p>Portfolio & Selected Public Projects</p>
+    <a href="https://github.com/liviurhos/radiolive-romania" class="live-button" target="_blank" rel="noopener noreferrer">Live</a>
   </header>
 
   <div class="container">
@@ -120,43 +148,20 @@
 
     <h2>About Me</h2>
     <p>
-      I'm Liviu B., a full-stack developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.
+      I'm Liviu B., a software developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.
     </p>
 
-  <section id="contact">
     <h2>Contact</h2>
-      <button id="showContactBtn" style="
-        background-color: #007acc;
-        color: white;
-        border: none;
-        padding: 0.5em 1em;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-      ">Show Contact</button>
-      <div id="contactInfo" style="margin-top: 1em; display: none; font-size: 1rem;">
-        <p>📧 Email: <a href="mailto:liviubcr1@gmail.com" target="_blank" rel="noopener noreferrer">liviubcr1@gmail.com</a></p>
-        <p>🔗 GitHub: <a href="https://github.com/liviurhos" target="_blank" rel="noopener noreferrer">github.com/liviurhos</a></p>
-      </div>
-  </section>
-
-  <script>
-    const btn = document.getElementById('showContactBtn');
-    const info = document.getElementById('contactInfo');
-    btn.addEventListener('click', () => {
-      if (info.style.display === 'none') {
-        info.style.display = 'block';
-        btn.textContent = 'Hide Contact';
-      } else {
-        info.style.display = 'none';
-        btn.textContent = 'Show Contact';
-      }
-    });
-  </script>
-
+    <form action="https://formspree.io/f/mnqeywqy" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 
   <footer>
-    &copy; 2025 Liviu B. – LAARB<sup>™</sup> STUDIO PRODUCTION. All rights reserved.
+    &copy; 2025 Liviu B. – LAARB™ STUDIO PRODUCTION. All rights reserved.
   </footer>
 
 </body>
