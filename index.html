@@ -1,168 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Liviu B. - LAARB™ STUDIO PRODUCTION – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liviu B. – LAARB™ STUDIO PRODUCTION – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #111;
+      color: #eee;
     }
-
-    header {
-      background: #222;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-      position: relative;
+    h1, h2 {
+      margin-bottom: 0.5rem;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      color: #ccc;
-    }
-
-    .live-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #e63946;
-      color: white;
-      padding: 0.5em 1em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-
-    ul.projects {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul.projects li {
-      background: #fff;
+    .project {
       margin: 1rem 0;
       padding: 1rem;
+      border: 1px solid #444;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-
-    ul.projects li a {
+    .btn {
+      padding: 0.3rem 0.6rem;
+      margin-left: 0.6rem;
+      background: #444;
+      color: #fff;
       text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
+      border-radius: 4px;
+      font-size: 0.9rem;
     }
-
-    form input, form textarea {
+    .btn:hover {
+      background: #666;
+    }
+    .contact-form {
+      margin-top: 2rem;
+      max-width: 400px;
+    }
+    input, textarea {
       width: 100%;
-      padding: 0.5em;
-      margin-bottom: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: 0.4rem 0;
+      padding: 0.5rem;
+      background: #222;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 4px;
     }
-
-    form button {
-      background-color: #007acc;
-      color: white;
-      border: none;
-      padding: 0.5em 1em;
-      border-radius: 5px;
+    input[type="submit"] {
       cursor: pointer;
+      background: #333;
     }
-
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      text-align: center;
+    input[type="submit"]:hover {
+      background: #555;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+    .success-message {
+      margin-top: 1rem;
+      color: #0f0;
     }
   </style>
 </head>
 <body>
+  <h1>Liviu B. – <span>LAARB<sup>™</sup> STUDIO PRODUCTION</span></h1>
+  <p>Proiecte selectate și funcționale (click pe oricare):</p>
 
-  <header>
-    <h1>Liviu B. – LAARB™ STUDIO PRODUCTION</h1>
-    <p>Portfolio & Selected Public Projects</p>
-    <a href="https://liviurhos.github.io/radiolive-romania/" class="live-button" target="_blank" rel="noopener noreferrer">Radio Live</a>
-  </header>
-
-  <div class="container">
-    <h2>Projects</h2>
-    <ul class="projects">
-      <li>
-        <a href="https://github.com/liviurhos/radiolive-romania" target="_blank" rel="noopener noreferrer">Radio Live România</a><br/>
-        Progressive Web App (PWA) for streaming Romanian radio stations. Includes theme switcher, volume control, now playing section, and PWA offline support.
-      </li>
-
-      <li>
-        <a href="https://github.com/liviurhos/silentshield" target="_blank" rel="noopener noreferrer">Silent Shield</a><br/>
-        SilentShield is a lightweight, privacy-first Chrome extension that blocks popups, cookie banners, overlays, and other distractions across the web.
-      </li>
-
-      <li>
-        <strong>Conwy Café System</strong> — <em style="color: gray;">Coming Soon</em><br/>
-        Full-stack ASP.NET project with separate admin and customer dashboards. Handles basket creation, item assignments, image uploads, and online ordering.
-      </li>
-      
-      <li>
-        <a href="https://github.com/liviurhos/BayWin-Courier-A2" target="_blank" rel="noopener noreferrer">BayWin Courier A2</a><br/>
-        Stand-alone project built for courier service functionalities. Includes location tracking and delivery management logic.
-      </li>
-      
-      <li>
-        <a href="https://github.com/liviurhos/MusicDatabaseServiceTaskRepo" target="_blank" rel="noopener noreferrer">Music Database Service Task</a><br/>
-        .NET solution for managing a music database through REST API. Covers CRUD operations, data models, and unit testing.
-      </li>
-    </ul>
-
-    <h2>About Me</h2>
-    <p>
-      I'm Liviu B., a software developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.
-    </p>
-
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xdkdggbq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <div class="project">
+    <strong>🎧 Radio Live România</strong>
+    <a href="https://liviurhos.github.io/radiolive-romania/" class="btn" target="_blank">Live</a>
+    <a href="https://github.com/liviurhos/radiolive-romania" class="btn" target="_blank">GitHub</a>
   </div>
 
-  <footer>
-    &copy; 2025 Liviu B. – LAARB™ STUDIO PRODUCTION. All rights reserved.
-  </footer>
+  <div class="project">
+    <strong>📀 Music Database Service Task</strong>
+    <a href="https://github.com/liviurhos/MusicDatabaseServiceTaskRepo" class="btn" target="_blank">GitHub</a>
+  </div>
 
+  <div class="project">
+    <strong>🍽️ Conwy Café</strong>
+    <span style="margin-left:0.6rem; font-style: italic;">Coming soon</span>
+  </div>
+
+  <h2>Contact</h2>
+  <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkdggbq" method="POST">
+    <input type="text" name="name" placeholder="Nume" required>
+    <input type="email" name="email" placeholder="Adresă de email" required>
+    <textarea name="message" placeholder="Mesaj" rows="5" required></textarea>
+    <input type="submit" value="Trimite">
+    <div id="success" class="success-message" style="display:none;">Mesaj trimis cu succes!</div>
+  </form>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('success');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const plainFormData = Object.fromEntries(formData.entries());
+      const formJson = JSON.stringify(plainFormData);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: formJson
+        });
+
+        if (response.ok) {
+          success.style.display = 'block';
+          form.reset();
+        } else {
+          alert('Eroare la trimitere. Încearcă din nou.');
+        }
+      } catch (error) {
+        alert('A apărut o eroare.');
+      }
+    });
+  </script>
 </body>
 </html>
