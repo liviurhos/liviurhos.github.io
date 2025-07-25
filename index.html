@@ -3,120 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Liviu B. - LAARB™ STUDIO PRODUCTION – Portfolio</title>
+  <title>Liviu B. - LAARB<sup>tm</sup> STUDIO PRODUCTION – Portfolio</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
       color: #333;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2em;
       line-height: 1.6;
     }
 
     header {
+      background: #222;
+      color: #fff;
+      padding: 2rem 1rem;
       text-align: center;
-      margin-bottom: 3em;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.2em;
-      color: #222;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
 
-    p.intro {
-      font-size: 1.1em;
-      color: #666;
+    header p {
+      margin-top: 0.5rem;
+      color: #ccc;
     }
 
-    .project {
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    ul.projects {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.projects li {
       background: #fff;
-      padding: 1.5em;
-      border-radius: 10px;
-      margin-bottom: 2em;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .project h2 {
-      margin-top: 0;
-      color: #005792;
-    }
-
-    a {
-      color: #005792;
+    ul.projects li a {
       text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-top: 3em;
-      background: #fff;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      color: #007acc;
+      font-weight: bold;
     }
 
     footer {
+      background: #111;
+      color: #ccc;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
       text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #aaa;
     }
 
-    .contact a {
-      display: inline-block;
-      margin-right: 1em;
-      margin-top: 0.5em;
+    footer a {
+      color: #9fd7ff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Liviu B.</h1>
-    <p class="intro"><strong>LAARB<sup>™</sup> STUDIO PRODUCTION</strong> – Software & Electronics Projects</p>
+    <h1>Liviu B. – LAARB<sup>tm</sup> STUDIO PRODUCTION</h1>
+    <p>Portfolio & Selected Public Projects</p>
   </header>
 
-  <div class="project">
-    <h2><a href="https://github.com/liviurhos/radiolive-romania">Radio Live Romania</a></h2>
-    <p>A Progressive Web App (PWA) that lets users stream Romanian radio stations. Features include theme switching, bitrate selection, and local preference storage.</p>
-    <p><a href="https://liviurhos.github.io/radiolive-romania/" target="_blank">Live Demo</a></p>
-  </div>
+  <div class="container">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li>
+        <a href="https://github.com/liviurhos/radiolive-romania" target="_blank">Radio Live România</a><br/>
+        Progressive Web App (PWA) for streaming Romanian radio stations. Includes theme switcher, volume control, now playing section, and PWA offline support.
+      </li>
+      <li>
+        <a href="https://github.com/liviurhos/ConwyCafe" target="_blank">Conwy Café System</a><br/>
+        Full-stack ASP.NET project with separate admin and customer dashboards. Handles basket creation, item assignments, image uploads, and online ordering.
+      </li>
+      <li>
+        <a href="https://github.com/liviurhos/BayWin-Courier-A2" target="_blank">BayWin Courier A2</a><br/>
+        Android project built for courier service functionalities. Includes location tracking and delivery management logic.
+      </li>
+      <li>
+        <a href="https://github.com/liviurhos/MusicDatabaseServiceTaskRepo" target="_blank">Music Database Service Task</a><br/>
+        .NET solution for managing a music database through REST API. Covers CRUD operations, data models, and unit testing.
+      </li>
+    </ul>
 
-  <div class="project">
-    <h2><a href="https://github.com/liviurhos/BayWin-Courier-A2">BayWin Courier A2</a></h2>
-    <p>A desktop courier management app built with WinForms and C#. It features a package tracking interface, basic customer management, and route handling logic for deliveries. Created as a logistics demo for Windows systems.</p>
-  </div>
-
-  <div class="project">
-    <h2><a href="https://github.com/liviurhos/Winamp-Pi-Player">Winamp Pi Player</a></h2>
-    <p>An audio player for Raspberry Pi, inspired by Winamp Classic. Built using Python and VLC backend with FFT-based audio visualizer and touchscreen-friendly controls.</p>
-  </div>
-
-  <div class="project">
-    <h2><a href="https://github.com/liviurhos/Three-Way-Traffic-Light-System">Three-Way Traffic Light System</a></h2>
-    <p>An Arduino project that simulates a three-direction traffic light system using LEDs and programmable delay logic. Ideal for basic embedded system demonstrations.</p>
-  </div>
-
-  <section id="about">
     <h2>About Me</h2>
-    <p>I’m Liviu B., founder of <strong>LAARB<sup>™</sup> STUDIO PRODUCTION</strong>. I work on real-world tech that blends hardware with software — from interactive web apps to smart microcontroller projects. My goal is to build things that work, not just things that look good.</p>
-  </section>
+    <p>
+      I'm Liviu B., a full-stack developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.
+    </p>
 
-  <section id="contact" class="contact">
     <h2>Contact</h2>
-    <p>For collaborations or tech inquiries, feel free to reach out:</p>
-    <a href="mailto:liviu@example.com">📧 Email</a>
-    <a href="https://github.com/liviurhos" target="_blank">💻 GitHub</a>
-  </section>
+    <p>
+      📧 Email: <a href="mailto:liviubcr1@gmail.com">liviubcr1@gmail.com</a><br/>
+      🔗 GitHub: <a href="https://github.com/liviurhos" target="_blank">github.com/liviurhos</a>
+    </p>
+  </div>
 
   <footer>
-    © 2025 Liviu B. · LAARB<sup>™</sup> STUDIO PRODUCTION · Powered by GitHub Pages
+    &copy; 2025 Liviu B. – LAARB<sup>tm</sup> STUDIO PRODUCTION. All rights reserved.
   </footer>
 
 </body>
