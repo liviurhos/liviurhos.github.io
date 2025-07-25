@@ -1,122 +1,295 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Liviu B. – LAARB™ STUDIO PRODUCTION – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background: #111;
-      color: #eee;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #eaeaea;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
     }
-    h1, h2 {
-      margin-bottom: 0.5rem;
+    main {
+      max-width: 720px;
+      width: 100%;
+      background: #1e1e2f;
+      border-radius: 12px;
+      padding: 2rem 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
     }
-    .project {
-      margin: 1rem 0;
-      padding: 1rem;
-      border: 1px solid #444;
-      border-radius: 8px;
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    .btn {
-      padding: 0.3rem 0.6rem;
-      margin-left: 0.6rem;
-      background: #444;
+    header h1 {
+      font-weight: 600;
+      font-size: 2.4rem;
+      margin-bottom: 0.2rem;
+      line-height: 1.1;
+      color: #6ec1e4;
+    }
+    header h1 sup {
+      font-size: 0.7rem;
+      vertical-align: super;
+      color: #6ec1e4;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #9aa0b1;
+    }
+
+    /* Live button top-right */
+    .live-button {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #50a0e2;
       color: #fff;
+      font-weight: 600;
+      padding: 0.5rem 1.3rem;
+      border-radius: 25px;
       text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+      float: right;
+      box-shadow: 0 0 8px #50a0e2aa;
     }
-    .btn:hover {
-      background: #666;
+    .live-button:hover {
+      background-color: #3d82c6;
+      box-shadow: 0 0 12px #3d82c6cc;
     }
-    .contact-form {
-      margin-top: 2rem;
+
+    /* Projects */
+    section.projects h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #323248;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #6ec1e4;
+    }
+    ul.projects {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    ul.projects li {
+      background-color: #2a2a43;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.8);
+      line-height: 1.4;
+      font-size: 1rem;
+      color: #cfd7e3;
+    }
+    ul.projects li a.project-link {
+      color: #71c7ff;
+      font-weight: 600;
+      text-decoration: none;
+      margin-right: 0.8rem;
+      transition: color 0.2s ease;
+    }
+    ul.projects li a.project-link:hover {
+      color: #3aa0ff;
+      text-decoration: underline;
+    }
+    ul.projects li em.coming-soon {
+      color: #8a90a0;
+      font-style: italic;
+      margin-left: 0.5rem;
+    }
+
+    /* About Me */
+    section.about h2 {
+      margin-top: 3rem;
+      font-weight: 600;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #323248;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #6ec1e4;
+    }
+    section.about p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #cfd7e3;
+    }
+
+    /* Contact */
+    section.contact {
+      margin-top: 3rem;
+    }
+    section.contact h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #323248;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: #6ec1e4;
+    }
+    form.contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       max-width: 400px;
     }
-    input, textarea {
-      width: 100%;
-      margin: 0.4rem 0;
-      padding: 0.5rem;
-      background: #222;
-      color: #fff;
-      border: 1px solid #555;
-      border-radius: 4px;
+    form.contact-form input,
+    form.contact-form textarea {
+      background-color: #22233f;
+      border: 1px solid #3a3e63;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      color: #eaeaea;
+      resize: vertical;
+      transition: border-color 0.3s ease;
     }
-    input[type="submit"] {
+    form.contact-form input:focus,
+    form.contact-form textarea:focus {
+      outline: none;
+      border-color: #71c7ff;
+      box-shadow: 0 0 8px #71c7ffaa;
+      background-color: #2c2f58;
+    }
+    form.contact-form button {
+      background-color: #50a0e2;
+      border: none;
+      padding: 0.8rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #f0f5f9;
+      border-radius: 25px;
       cursor: pointer;
-      background: #333;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 8px #50a0e2aa;
     }
-    input[type="submit"]:hover {
-      background: #555;
+    form.contact-form button:hover {
+      background-color: #3d82c6;
+      box-shadow: 0 0 12px #3d82c6cc;
     }
+
+    /* Success message */
     .success-message {
       margin-top: 1rem;
-      color: #0f0;
+      padding: 0.8rem 1rem;
+      background-color: #27794d;
+      color: #d4f4dd;
+      border-radius: 8px;
+      font-weight: 600;
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        padding: 1.5rem 1.5rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .live-button {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem auto;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Liviu B. – <span>LAARB<sup>™</sup> STUDIO PRODUCTION</span></h1>
-  <p>Proiecte selectate și funcționale (click pe oricare):</p>
+  <main>
+    <header>
+      <h1>Liviu B. – LAARB<sup>™</sup> STUDIO PRODUCTION</h1>
+      <a href="https://liviurhos.github.io/radiolive-romania/" target="_blank" rel="noopener noreferrer" class="live-button" aria-label="Live Radio">Live</a>
+      <p>Portfolio & Selected Public Projects</p>
+    </header>
 
-  <div class="project">
-    <strong>🎧 Radio Live România</strong>
-    <a href="https://liviurhos.github.io/radiolive-romania/" class="btn" target="_blank">Live</a>
-    <a href="https://github.com/liviurhos/radiolive-romania" class="btn" target="_blank">GitHub</a>
-  </div>
+    <section class="projects" aria-label="Projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <a href="https://github.com/liviurhos/radiolive-romania" target="_blank" rel="noopener noreferrer" class="project-link">Radio Live România</a>
+          Progressive Web App (PWA) for streaming Romanian radio stations. Includes theme switcher, volume control, now playing section, and PWA offline support.
+        </li>
+        <li>
+          <a href="https://github.com/liviurhos/silentshield" target="_blank" rel="noopener noreferrer" class="project-link">Silent Shield</a>
+          Lightweight, privacy-first Chrome extension blocking popups, cookie banners, overlays, and distractions.
+        </li>
+        <li>
+          <strong>Conwy Café System</strong><em class="coming-soon">Coming Soon</em><br/>
+          Full-stack ASP.NET project with admin and customer dashboards, basket/item management, image upload, and online ordering.
+        </li>
+        <li>
+          <a href="https://github.com/liviurhos/BayWin-Courier-A2" target="_blank" rel="noopener noreferrer" class="project-link">BayWin Courier A2</a>
+          Stand-alone courier service app with location tracking and delivery management logic.
+        </li>
+        <li>
+          <a href="https://github.com/liviurhos/MusicDatabaseServiceTaskRepo" target="_blank" rel="noopener noreferrer" class="project-link">Music Database Service Task</a>
+          .NET solution for managing a music database via REST API with CRUD and unit tests.
+        </li>
+      </ul>
+    </section>
 
-  <div class="project">
-    <strong>📀 Music Database Service Task</strong>
-    <a href="https://github.com/liviurhos/MusicDatabaseServiceTaskRepo" class="btn" target="_blank">GitHub</a>
-  </div>
+    <section class="about" aria-label="About Me">
+      <h2>About Me</h2>
+      <p>I'm Liviu B., a full-stack developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.</p>
+    </section>
 
-  <div class="project">
-    <strong>🍽️ Conwy Café</strong>
-    <span style="margin-left:0.6rem; font-style: italic;">Coming soon</span>
-  </div>
-
-  <h2>Contact</h2>
-  <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkdggbq" method="POST">
-    <input type="text" name="name" placeholder="Nume" required>
-    <input type="email" name="email" placeholder="Adresă de email" required>
-    <textarea name="message" placeholder="Mesaj" rows="5" required></textarea>
-    <input type="submit" value="Trimite">
-    <div id="success" class="success-message" style="display:none;">Mesaj trimis cu succes!</div>
-  </form>
+    <section class="contact" aria-label="Contact Form">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdkdggbq" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="successMessage" class="success-message" role="alert" aria-live="polite">Message sent successfully!</div>
+    </section>
+  </main>
 
   <script>
     const form = document.getElementById('contactForm');
-    const success = document.getElementById('success');
+    const successMessage = document.getElementById('successMessage');
 
-    form.addEventListener('submit', async function(event) {
-      event.preventDefault();
+    successMessage.style.display = 'none';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
       const formData = new FormData(form);
-      const plainFormData = Object.fromEntries(formData.entries());
-      const formJson = JSON.stringify(plainFormData);
+      const data = Object.fromEntries(formData.entries());
 
       try {
         const response = await fetch(form.action, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           },
-          body: formJson
+          body: JSON.stringify(data),
         });
 
         if (response.ok) {
-          success.style.display = 'block';
+          successMessage.style.display = 'block';
           form.reset();
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+          }, 5000);
         } else {
-          alert('Eroare la trimitere. Încearcă din nou.');
+          alert('Error sending message. Please try again.');
         }
-      } catch (error) {
-        alert('A apărut o eroare.');
+      } catch {
+        alert('Network error. Please try again later.');
       }
     });
   </script>
