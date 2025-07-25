@@ -123,12 +123,37 @@
       I'm Liviu B., a full-stack developer and tech enthusiast passionate about clean interfaces, real-time systems, and merging design with functionality. I enjoy building projects that are both practical and visually appealing, whether it’s a streaming platform or a restaurant ordering system.
     </p>
 
+  <section id="contact">
     <h2>Contact</h2>
-    <p>
-      📧 Email: <a href="mailto:liviubcr1@gmail.com" target="_blank" rel="noopener noreferrer">liviubcr1@gmail.com</a><br/>
-      🔗 GitHub: <a href="https://github.com/liviurhos" target="_blank" rel="noopener noreferrer">github.com/liviurhos</a>
-    </p>
-  </div>
+      <button id="showContactBtn" style="
+        background-color: #007acc;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+      ">Show Contact</button>
+      <div id="contactInfo" style="margin-top: 1em; display: none; font-size: 1rem;">
+        <p>📧 Email: <a href="mailto:liviubcr1@gmail.com" target="_blank" rel="noopener noreferrer">liviubcr1@gmail.com</a></p>
+        <p>🔗 GitHub: <a href="https://github.com/liviurhos" target="_blank" rel="noopener noreferrer">github.com/liviurhos</a></p>
+      </div>
+  </section>
+
+  <script>
+    const btn = document.getElementById('showContactBtn');
+    const info = document.getElementById('contactInfo');
+    btn.addEventListener('click', () => {
+      if (info.style.display === 'none') {
+        info.style.display = 'block';
+        btn.textContent = 'Hide Contact';
+      } else {
+        info.style.display = 'none';
+        btn.textContent = 'Show Contact';
+      }
+    });
+  </script>
+
 
   <footer>
     &copy; 2025 Liviu B. – LAARB<sup>™</sup> STUDIO PRODUCTION. All rights reserved.
