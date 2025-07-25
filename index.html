@@ -4,179 +4,179 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Liviu B. – LAARB™ STUDIO PRODUCTION – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & base */
+    /* Copiat și adaptat stiluri din radiolive-romania */
     * {
       box-sizing: border-box;
     }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #99ffd6;
-      color: #eaeaea;
       margin: 0;
-      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      background: #181b23;
+      color: #eaeaea;
+      line-height: 1.5;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      min-height: 100vh;
+      padding: 2rem;
     }
     main {
-      max-width: 720px;
+      max-width: 760px;
       width: 100%;
-      background: #4da6ff;
-      border-radius: 12px;
-      padding: 2rem 3rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+      background: #1f2233;
+      border-radius: 10px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.7);
+      padding: 2.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      position: relative;
     }
     header h1 {
       font-weight: 600;
-      font-size: 2.4rem;
-      margin-bottom: 0.2rem;
+      font-size: 2.6rem;
+      margin: 0;
       line-height: 1.1;
-      color: #6ec1e4;
+      color: #7ad7ff;
     }
     header h1 sup {
       font-size: 0.7rem;
       vertical-align: super;
-      color: #6ec1e4;
+      color: #7ad7ff;
     }
     header p {
       font-weight: 400;
       font-size: 1.1rem;
-      color: #9aa0b1;
+      color: #b0b7cc;
+      margin-top: 0.3rem;
     }
-
-    /* Live button top-right */
+    /* Live button styled exactly as in radiolive-romania */
     .live-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #50a0e2;
-      color: #fff;
-      font-weight: 600;
-      padding: 0.5rem 1.3rem;
-      border-radius: 25px;
-      text-decoration: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #7ad7ff;
+      color: #181b23;
+      font-weight: 700;
+      padding: 0.45rem 1.2rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px #7ad7ffaa;
       transition: background-color 0.3s ease;
-      float: right;
-      box-shadow: 0 0 8px #50a0e2aa;
+      text-decoration: none;
+      user-select: none;
     }
-    .live-button:hover {
-      background-color: #3d82c6;
-      box-shadow: 0 0 12px #3d82c6cc;
+    .live-button:hover,
+    .live-button:focus {
+      background-color: #5ac0ff;
+      box-shadow: 0 0 15px #5ac0ffcc;
+      outline: none;
     }
 
-    /* Projects */
-    section.projects h2 {
+    /* Sections */
+    section h2 {
       font-weight: 600;
       font-size: 1.8rem;
-      border-bottom: 2px solid #323248;
-      padding-bottom: 0.3rem;
+      color: #7ad7ff;
       margin-bottom: 1rem;
-      color: #6ec1e4;
+      border-bottom: 2px solid #2f344b;
+      padding-bottom: 0.3rem;
     }
+
+    /* Projects list */
     ul.projects {
       list-style: none;
       padding-left: 0;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
     ul.projects li {
-      background-color: #2a2a43;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1rem;
+      background: #2f344b;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.8);
-      line-height: 1.4;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 2px 6px #0b0c12;
+      color: #d1d9f0;
       font-size: 1rem;
-      color: #cfd7e3;
+      line-height: 1.3;
     }
     ul.projects li a.project-link {
-      color: #71c7ff;
-      font-weight: 600;
+      color: #a7e3ff;
+      font-weight: 700;
       text-decoration: none;
       margin-right: 0.8rem;
       transition: color 0.2s ease;
     }
-    ul.projects li a.project-link:hover {
-      color: #3aa0ff;
+    ul.projects li a.project-link:hover,
+    ul.projects li a.project-link:focus {
+      color: #5ac0ff;
       text-decoration: underline;
+      outline: none;
     }
     ul.projects li em.coming-soon {
-      color: #8a90a0;
+      color: #9099a7;
       font-style: italic;
       margin-left: 0.5rem;
+      font-weight: 400;
     }
 
-    /* About Me */
-    section.about h2 {
-      margin-top: 3rem;
-      font-weight: 600;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #323248;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #6ec1e4;
-    }
+    /* About */
     section.about p {
       font-size: 1rem;
+      color: #d1d9f0;
       line-height: 1.5;
-      color: #cfd7e3;
     }
 
-    /* Contact */
-    section.contact {
-      margin-top: 3rem;
-    }
-    section.contact h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #323248;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: #6ec1e4;
-    }
+    /* Contact form */
     form.contact-form {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       max-width: 400px;
+      margin-top: 0.5rem;
     }
     form.contact-form input,
     form.contact-form textarea {
-      background-color: #22233f;
-      border: 1px solid #3a3e63;
+      background-color: #1f2233;
+      border: 1px solid #4a5166;
       border-radius: 6px;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
       color: #eaeaea;
+      font-size: 1rem;
+      padding: 0.7rem 1rem;
       resize: vertical;
       transition: border-color 0.3s ease;
     }
     form.contact-form input:focus,
     form.contact-form textarea:focus {
+      border-color: #7ad7ff;
+      box-shadow: 0 0 8px #7ad7ffaa;
       outline: none;
-      border-color: #71c7ff;
-      box-shadow: 0 0 8px #71c7ffaa;
-      background-color: #2c2f58;
+      background-color: #292f4b;
     }
     form.contact-form button {
-      background-color: #50a0e2;
+      background-color: #7ad7ff;
       border: none;
-      padding: 0.8rem;
+      border-radius: 40px;
+      padding: 0.7rem;
+      color: #181b23;
       font-weight: 700;
       font-size: 1.1rem;
-      color: #f0f5f9;
-      border-radius: 25px;
       cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 0 8px #50a0e2aa;
+      box-shadow: 0 0 12px #7ad7ffaa;
+      transition: background-color 0.3s ease;
     }
-    form.contact-form button:hover {
-      background-color: #3d82c6;
-      box-shadow: 0 0 12px #3d82c6cc;
+    form.contact-form button:hover,
+    form.contact-form button:focus {
+      background-color: #5ac0ff;
+      box-shadow: 0 0 18px #5ac0ffcc;
+      outline: none;
     }
 
     /* Success message */
@@ -199,9 +199,13 @@
         font-size: 1.8rem;
       }
       .live-button {
-        float: none;
+        position: static;
         display: block;
-        margin: 0 auto 1rem auto;
+        margin: 1rem auto 0 auto;
+        box-shadow: 0 0 12px #7ad7ffaa;
+      }
+      form.contact-form {
+        max-width: 100%;
       }
     }
   </style>
@@ -210,7 +214,7 @@
   <main>
     <header>
       <h1>Liviu B. – LAARB<sup>™</sup> STUDIO PRODUCTION</h1>
-      <a href="https://liviurhos.github.io/radiolive-romania/" target="_blank" rel="noopener noreferrer" class="live-button" aria-label="Live Radio">Live</a>
+      <a href="https://liviurhos.github.io/radiolive-romania/" class="live-button" target="_blank" rel="noopener noreferrer" aria-label="Live Radio">Live</a>
       <p>Portfolio & Selected Public Projects</p>
     </header>
 
